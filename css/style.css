@@ -1,1 +1,116 @@
 @charset "UTF-8";
+#gnav-bin{
+  display: none;
+}
+body{
+  font-family:"roboto","noto sans jp";
+  background-color:#f5fafd
+}
+body::before{
+  content: "";
+  display: block;
+  height: 72px;
+  background-color: #fff;
+}
+a{
+  font-size: 17px;
+  color: #01579B;
+  color: #ffffff;
+}
+a:hover{
+  color: #42a5f5;
+}
+.alert{
+  color: darkred;
+}
+video,img{
+  width: 100%;
+}
+#head{
+  display: block;
+  box-sizing: border-box;
+  height: 72px;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px #ccc;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  
+}
+#head h1{
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  width: 72px;
+  height: 72px;
+  float: left;
+}
+#head h1 a img{
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+}
+#gnav{
+  clear: both;
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  right: -50vw;
+  top: 0;
+  background-color: #202020;
+  transition: transform .3s;
+}
+.gnav-open::after{
+  content: "";
+  display: block;
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  right: -50vw;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: transform .3s;
+}
+
+#head .gnav-open,
+#gnav .gnav-close{
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 72px;
+  width: 72px;
+  cursor: pointer;
+  user-select: none;
+}
+#head .gnav-open i,
+#gnav .gnav-close i{ font-size: 58px; padding: 7px; }
+#head .gnav-open{ color: #000000; float: right; }
+#gnav .gnav-close{ color: #fefefe; right: 0; position: absolute; }
+
+#gnav-ul{
+  width: 100%;
+  position: absolute;
+  top: 72px;
+}
+#gnav-ul li{
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+#gnav-ul li a{
+  display: block;
+  height: 20px;
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+#gnav-bin:checked ~ #head #gnav{
+  transform: translateX(-50vw);
+}
+#gnav-bin:checked ~ #head .gnav-open::after{
+  transform: translateX(-100vw);
+}
+#visual{
+  display: flexbox;
+}
