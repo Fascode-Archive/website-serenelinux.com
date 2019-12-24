@@ -4,18 +4,17 @@
 }
 body{
   font-family:"roboto","noto sans jp";
-  background-color:#f5fafd
+  background-color: #fefefe;
 }
 body::before{
   content: "";
   display: block;
   height: 72px;
-  background-color: #fff;
+  background-color: #f5fafd;
 }
 a{
   font-size: 17px;
   color: #01579B;
-  color: #ffffff;
 }
 a:hover{
   color: #42a5f5;
@@ -24,7 +23,9 @@ a:hover{
   color: darkred;
 }
 video,img{
-  width: 100%;
+  display: block;
+  width: 85%;
+  margin: 0 auto;
 }
 #head{
   display: block;
@@ -34,7 +35,8 @@ video,img{
   box-shadow: 0px 3px 3px #ccc;
   position: fixed;
   top: 0;
-  width: 100vw;
+  z-index: 9;
+  width: 100%;
   
 }
 #head h1{
@@ -43,7 +45,6 @@ video,img{
   vertical-align: top;
   width: 72px;
   height: 72px;
-  float: left;
 }
 #head h1 a img{
   width: 64px;
@@ -104,6 +105,10 @@ video,img{
   font-size: 20px;
   text-align: center;
   text-decoration: none;
+  color: #fff;
+}
+#gnav-ul li a:hover{
+  color: #01579B;
 }
 #gnav-bin:checked ~ #head #gnav{
   transform: translateX(-50vw);
@@ -112,5 +117,135 @@ video,img{
   transform: translateX(-100vw);
 }
 #visual{
-  display: flexbox;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 10px;
+}
+#visual img{
+  width: 100%;
+}
+#visual .text-box{
+  box-sizing: border-box;
+  padding: 20px;
+}
+#visual .text-box p{
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+#visual .text-box span{
+  font-size: 48px;
+  font-weight: 600;
+}
+#visual .text-box a{
+  margin: 10px 0;
+  color: #fff;
+}
+#visual .text-box a:hover{
+  color: #fff;
+}
+#visual .text-box a span{
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 8px;
+  text-decoration: none;
+  position: relative;
+}
+#visual .text-box a i{
+  background-color: #202020;
+  font-size: 24px;
+  padding: 6px;
+}
+#visual .text-box a span::before{
+  content: '';
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  z-index: -1;
+  background-color: #01579B;
+}
+#visual .text-box a span::after{
+  content: '';
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  z-index: -1;
+  background-color: #333;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+#visual .text-box a span:hover::after{
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+#news{
+  padding: 10px;
+  background-color: #fafafa;
+  color: #333;
+}
+#news section{
+  padding: 10px;
+  margin: 10px 0;
+  border-bottom: 1px solid #999;
+}
+#news .title{
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+#news p{
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+#news time{
+  display: block;
+  text-align: right;
+  line-height: 22px;
+}
+#news a{
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px;
+}
+#video video{
+  border-radius: 5px;
+}
+.video-title.a1{
+  position: relative;
+  height: 26px;
+  padding: 20px 0;
+  font-size: 26px;
+}
+.video-title.a1 p{
+  font-size: 100%;
+  font-family: Consolas,Monaco,monospace;
+  font-weight: bold;
+  width: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 26px;
+}
+.k-ani{
+  animation: typing 6s steps(18) infinite, cursor 1s steps(1,start) infinite;
+  border-right: .1em solid;
+}
+@keyframes cursor {
+  50% { border-right-color:transparent; }
+}
+@keyframes typing {
+  10%{ width:0; }
+  30% { width:18ch }
+  70% { width:18ch }
+  90% { width:0; }
+}
+#foot{
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+  bor
 }
