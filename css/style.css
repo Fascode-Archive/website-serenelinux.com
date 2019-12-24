@@ -84,8 +84,8 @@ video,img{
   user-select: none;
 }
 #head .gnav-open i,
-#gnav .gnav-close i{ font-size: 58px; padding: 7px; }
-#head .gnav-open{ color: #000000; float: right; }
+#gnav .gnav-close i{ font-size: 48px; padding: 13px; }
+#head .gnav-open{ color: #fefefe; float: right;position: relative; }
 #gnav .gnav-close{ color: #fefefe; right: 0; position: absolute; }
 
 #gnav-ul{
@@ -108,7 +108,7 @@ video,img{
   color: #fff;
 }
 #gnav-ul li a:hover{
-  color: #01579B;
+  background-color: #044a9f;
 }
 #gnav-bin:checked ~ #head #gnav{
   transform: translateX(-50vw);
@@ -160,14 +160,16 @@ video,img{
   padding: 6px;
   box-shadow: 0 3px 10px rgba(0,0,0,.4);
 }
-#visual .text-box a span::before{
+#visual .text-box a span::before,
+#head .gnav-open i::before{
   content: '';
   position: absolute;
   top: 0;right: 0;bottom: 0;left: 0;
   z-index: -1;
   background-color: #01579B;
 }
-#visual .text-box a span::after{
+#visual .text-box a span::after,
+#head .gnav-open i::after{
   content: '';
   position: absolute;
   top: 0;right: 0;bottom: 0;left: 0;
@@ -176,6 +178,10 @@ video,img{
   transform-origin: right top;
   transform: scale(0, 1);
   transition: transform .3s;
+}
+#head .gnav-open i:hover::after{
+  transform-origin: right top;
+  transform: scale(1, 1);
 }
 #visual .text-box a span:hover::after{
   transform-origin: left top;
