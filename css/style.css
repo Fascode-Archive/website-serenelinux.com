@@ -4,7 +4,7 @@
 }
 body{
   font-family:"roboto","noto sans jp";
-  background-color: #fefefe;
+  background-color: #f0f0f0;
 }
 body::before{
   content: "";
@@ -31,13 +31,22 @@ video,img{
   display: block;
   box-sizing: border-box;
   height: 72px;
-  background-color: #fcfcff;
-  box-shadow: 0px 3px 3px #ccc;
+  background-color: #fefeff;
   position: fixed;
   top: 0;
   z-index: 9;
   width: 100%;
-  
+
+}
+body::after{
+  content: "";
+  width: 100vw;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fefeff;
+  box-shadow: 0px 3px 3px #ccc;
 }
 #head h1{
   display: inline-block;
@@ -72,6 +81,13 @@ video,img{
   background-color: rgba(0, 0, 0, 0.5);
   transition: transform .3s;
 }
+#head .gnav-open i::before{
+  content: '';
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  z-index: -1;
+  background-color: #fefeff;
+}
 
 #head .gnav-open,
 #gnav .gnav-close{
@@ -85,9 +101,11 @@ video,img{
 }
 #head .gnav-open i,
 #gnav .gnav-close i{ font-size: 48px; padding: 13px; }
-#head .gnav-open{ color: #fefefe; float: right;position: relative; }
+#head .gnav-open{ color: #333; float: right;position: relative; }
 #gnav .gnav-close{ color: #fefefe; right: 0; position: absolute; }
-
+#gnav .gnav-close:hover{
+  background-color: #01579B;
+}
 #gnav-ul{
   width: 100%;
   position: absolute;
@@ -101,14 +119,15 @@ video,img{
 #gnav-ul li a{
   display: block;
   height: 20px;
-  padding: 10px 0;
+  padding: 20px 0;
   font-size: 20px;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: #fefeff;
 }
 #gnav-ul li a:hover{
-  background-color: #044a9f;
+  background-color: #01579B;
 }
 #gnav-bin:checked ~ #head #gnav{
   transform: translateX(-50vw);
@@ -120,6 +139,7 @@ video,img{
   display: flex;
   flex-direction: column-reverse;
   padding-bottom: 10px;
+  background-color: #fff;
 }
 #visual img{
   width: 100%;
@@ -152,6 +172,7 @@ video,img{
   padding: 8px;
   text-decoration: none;
   position: relative;
+  z-index: 3;
   box-shadow: 0 3px 10px rgba(0,0,0,.4);
 }
 #visual .text-box a i{
@@ -160,16 +181,14 @@ video,img{
   padding: 6px;
   box-shadow: 0 3px 10px rgba(0,0,0,.4);
 }
-#visual .text-box a span::before,
-#head .gnav-open i::before{
+#visual .text-box a span::before{
   content: '';
   position: absolute;
   top: 0;right: 0;bottom: 0;left: 0;
   z-index: -1;
   background-color: #01579B;
 }
-#visual .text-box a span::after,
-#head .gnav-open i::after{
+#visual .text-box a span::after{
   content: '';
   position: absolute;
   top: 0;right: 0;bottom: 0;left: 0;
@@ -178,10 +197,6 @@ video,img{
   transform-origin: right top;
   transform: scale(0, 1);
   transition: transform .3s;
-}
-#head .gnav-open i:hover::after{
-  transform-origin: right top;
-  transform: scale(1, 1);
 }
 #visual .text-box a span:hover::after{
   transform-origin: left top;
@@ -193,9 +208,10 @@ video,img{
   color: #333;
 }
 #news section{
+  box-sizing: border-box;
+  width: 90%;
   padding: 10px;
-  margin: 10px 0;
-  border-bottom: 1px solid #999;
+  margin: 10px auto;
   text-align: center;
 }
 #news .title{
@@ -220,24 +236,28 @@ video,img{
   background-color: #01579B;
   box-shadow: 0 3px 5px rgba(0,0,0,.2);
   transition: .4s;
-  color: #fff;
+  color: #fefeff;
 }
 #news a:hover{
   box-shadow: none;
 }
+#video{
+  background-color: #f5fafd;
+}
 #video video{
   border-radius: 5px;
+  margin-bottom: 30px;
 }
 #video h1{
-  font-size: 32px;
-  padding: 20px 0;
+  font-size: 38px;
+  padding: 50px 0;
   text-align: center;
 }
 .video-title.a1{
   position: relative;
   height: 30px;
   padding: 10px 0;
-  font-size: 26px;
+  font-size: 25px;
 }
 .video-title.a1 p{
   font-size: 100%;
@@ -268,4 +288,196 @@ video,img{
   padding: 20px 0;
   margin-top: 20px;
   text-align: center;
+}
+@media screen and (min-width:480px) and (max-width:599px) { 
+  #gnav{
+    width: 70vw;
+    right: -70vw;
+  }
+  #gnav-bin:checked ~ #head #gnav {
+    transform: translateX(-70vw);
+  }
+  #gnav-ul{
+    font-size: 0;
+  }
+  #gnav-ul li{
+    width: 50%;
+  }
+}
+
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+  #visual{
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+  }
+  #visual img{
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+  #visual .text-box span{
+    font-size: 5.5vw;
+  }
+  #visual .text-box p.text{
+    font-size: 18px;
+  }
+  #news{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; 
+    padding: 30px 10px 50px;
+  }
+  #news section{
+    width: 45%;
+  }
+  #news .title{
+    font-size: 22px;
+  }
+  #news p{
+    font-size: 20px;
+  }
+  #news time{
+    font-size: 19px;
+  }
+}
+
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+  #gnav{
+    right: 0;
+    width: 759px;
+    height: 72px;
+    background-color: #fefeff;
+  }
+  #gnav-bin:checked ~ #head #gnav {
+    transform: translateX(-0vw);
+  }
+  #gnav-bin:checked ~ #head .gnav-open::after{
+    display: none;
+  }
+  #gnav .gnav-close{
+    display: none;
+  }
+  #gnav-ul{
+    font-size: 0;
+    top: 0;
+  }
+  #gnav-ul li{
+    width: auto;
+  }
+  #gnav-ul li a{
+    height: 72px;
+    line-height: 72px;
+    padding: 0 20px;
+    color: black;
+  }
+  #gnav-ul li a:hover{
+    background-color: #fefeff;
+    opacity: 0.5;
+  }
+  #visual{
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+    padding:0 40px;
+  }
+  #visual .text-box span{
+    font-size: 5.5vw;
+  }
+  #visual .text-box p.text{
+    font-size: 20px;
+  }
+  #visual .text-box a span{
+    font-size: 24px;
+  }#visual .text-box a i{
+    font-size: 28px;
+  }
+  .video-title.a1{
+    font-size: 28px;
+  }
+  #news{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; 
+    padding: 50px 10px;
+  }
+  #news section{
+    width: 25%;
+  }
+}
+
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+  #head{
+    width: 1280px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  #gnav{
+    right: 0;
+    width: 759px;
+    height: 72px;
+    background-color: #fefeff;
+    position: absolute;
+  }
+  #gnav-bin:checked ~ #head #gnav {
+    transform: translateX(-0vw);
+  }
+  .gnav-open::after{
+    display: none;
+  }
+  #gnav-bin:checked ~ #head .gnav-open::after{
+    display: none;
+  }
+  #gnav .gnav-close{
+    display: none;
+  }
+  #gnav-ul{
+    font-size: 0;
+    top: 0;
+  }
+  #gnav-ul li{
+    width: auto;
+  }
+  #gnav-ul li a{
+    height: 72px;
+    line-height: 72px;
+    padding: 0 20px;
+    color: black;
+  }
+  #gnav-ul li a:hover{
+    background-color: #fefeff;
+    opacity: 0.5;
+  }
+  #visual{
+    margin: 0 auto;
+    width: 1100px;
+    padding: 0 90px;
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+  }
+  #news{
+    margin: 0 auto;
+    width:1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 40px;
+  }
+  #news section{
+    width: 300px;
+  }
+  #video{
+    width:1280px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
 }
