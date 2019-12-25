@@ -250,6 +250,7 @@ body::after{
 }
 #video{
   background-color: #f5fafd;
+  padding-bottom: 50px;
 }
 #video video{
   border-radius: 5px;
