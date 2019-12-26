@@ -189,7 +189,7 @@ body::after{
 @media screen and (min-width:960px) and (max-width:1279px) {
   #gnav{
     right: 0;
-    width: 830px;
+    width: 870px;
     height: 72px;
     background-color: #fefeff;
   }
@@ -204,10 +204,8 @@ body::after{
   }
   #gnav-ul{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;  
-    align-items: center;
+    justify-content: flex-end; 
     font-size: 0;
     top: 0;
   }
@@ -241,14 +239,14 @@ body::after{
 ------------------------------ */
 @media screen and (min-width:1280px) {
   #head{
-    width: 1280px;
+    max-width: 1280px;
     left: 0;
     right: 0;
     margin: 0 auto;
   }
   #gnav{
     right: 0;
-    width: 830px;
+    width: 870px;
     height: 72px;
     background-color: #fefeff;
     position: absolute;
@@ -267,10 +265,8 @@ body::after{
   }
   #gnav-ul{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;  
-    align-items: center;
+    justify-content: flex-end; 
     font-size: 0;
     top: 0;
   }
