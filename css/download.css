@@ -22,11 +22,16 @@
   font-size: 19px;
   margin-bottom: 10px;
 }
+.category-media-box{
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
 .download .category-box{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 0 5% 10px;
+  margin-bottom: 10px;
 }
 .download .category-box section{
   box-sizing: border-box;
@@ -38,7 +43,8 @@
 }
 .download img,
 .download video{
-  width: 90%;
+  width: 100%;
+  border-radius: 10px;
 }
 .download .link-box{
   margin: 10px auto; 
@@ -51,11 +57,134 @@
   text-decoration: none;
   padding: 5px 15px;
 }
+.download .link-box a.botton:hover{
+  box-shadow: none;
+}
 .download .link-box a.botton{
   background-color: #01579B;
   box-shadow: 0 3px 5px rgba(0,0,0,.2);
   transition: .4s;
   color: #fefeff;
-  border-radius: 15px;
+  border-radius: 30px;
   font-size: 20px;
+  padding: 10px 20px;
+}
+
+@media screen and (min-width:480px) and (max-width:599px) { 
+
+}
+
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+  .download{
+    min-height: 800px;
+    max-height: 100vh;
+  }
+  .download .text-box{
+    margin: 5vh 0 5vh 10%;
+  }
+  .category-media-box{
+    margin: 0 10%;
+  }
+  .download .link-box a.botton {
+    font-size: 22px;
+    margin-top: 3vh;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+}
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+  .download{
+    min-height: 600px;
+    max-height: 100vh;
+  }
+  .download .text-box{
+    margin: 10vh 0 7vh 5%;
+  }
+  .download .text-box h1{
+    font-size: 42px;
+  }
+  .category-media-box{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .download .category-box{
+    flex-flow: row wrap;
+    align-content: space-between;
+    width: 47.5%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+  .download .category-box section{
+    margin: 10px 0 0;
+  }
+  .download .category-media-box img,
+  .download .category-media-box video{
+    width: 50%;
+    margin: 0;
+  }
+  .download .link-box{
+    margin: 5vh auto;
+  }
+  .download .link-box a.botton {
+    font-size: 24px;
+    margin: 7vh 0 10px;
+    padding: 10px 30px;
+    border-radius: 30px;
+  }
+}
+
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+  .download{
+    min-height: 600px;
+    max-height: 100vh;
+  }
+  .download .text-box{
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    max-width: 1200px;
+    margin: 10vh auto 4vh;
+  }
+  .download .text-box h1{
+    width: 1200px;
+    font-size: 42px;
+  }
+  .category-media-box{
+    width: 1200px;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .download .category-box{
+    flex-flow: row wrap;
+    align-content: space-between;
+    width: 47.5%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+  .download .category-box section{
+    margin: 10px 0 0;
+  }
+  .download .category-media-box img,
+  .download .category-media-box video{
+    width: 50%;
+    margin: 0;
+  }
+  .download .link-box{
+    margin: 40px auto;
+  }
+  .download .link-box a.botton {
+    font-size: 24px;
+    margin-top: 5vh;
+    padding: 10px 30px;
+    border-radius: 30px;
+  }
 }
