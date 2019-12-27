@@ -9,23 +9,23 @@
 .download .text-box{
   display: flex;
   flex-direction: column-reverse;
-  margin: 20px 0 20px 5%;
+  margin: 20px 0 20px 3%;
 }
 .download .text-box h1{
-  font-size: 25px;
+  font-size: 26px;
   color: #333;
 }
 .download .text-box h1 span{
   display: inline-block;
 }
 .download .text-box h2{
-  font-size: 19px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .category-media-box{
   display: flex;
   flex-direction: column;
-  margin: 0 5%;
+  margin: 0 3%;
 }
 .download .category-box{
   display: flex;
@@ -40,6 +40,9 @@
 }
 .download .category-box i{
   font-size: 48px;
+}
+.download .category-box p{
+  font-size: 17px;
 }
 .download img,
 .download video{
@@ -98,42 +101,49 @@
 ------------------------------ */
 @media screen and (min-width:960px) and (max-width:1279px) {
   .download{
-    min-height: 600px;
+    min-height: 450px;
     max-height: 100vh;
+    padding-bottom:  5vh;
   }
   .download .text-box{
-    margin: 10vh 0 7vh 5%;
+    margin: 7vh 0 3vh 3%;
   }
   .download .text-box h1{
     font-size: 42px;
   }
   .category-media-box{
-    flex-flow: row wrap;
+
+    flex-flow: row-reverse wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
+    position: relative;
   }
   .download .category-box{
     flex-flow: row wrap;
     align-content: space-between;
-    width: 47.5%;
+    width: 43%;
     height: 100%;
     margin-bottom: 0;
   }
   .download .category-box section{
-    margin: 10px 0 0;
+    margin: 0 0 10px ;
   }
   .download .category-media-box img,
   .download .category-media-box video{
-    width: 50%;
+    width: 55%;
     margin: 0;
   }
   .download .link-box{
-    margin: 5vh auto;
+    margin: 0;
+    right: 4%;
+    width: 38%;
+    position: absolute;
+    align-self: flex-end;
   }
   .download .link-box a.botton {
     font-size: 24px;
     margin: 7vh 0 10px;
-    padding: 10px 30px;
+    padding: 5px 30px;
     border-radius: 30px;
   }
 }
@@ -159,9 +169,10 @@
   .category-media-box{
     width: 1200px;
     margin: 0 auto;
-    flex-flow: row wrap;
+    flex-flow: row-reverse wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
+    position: relative;
   }
   .download .category-box{
     flex-flow: row wrap;
@@ -179,7 +190,13 @@
     margin: 0;
   }
   .download .link-box{
-    margin: 40px auto;
+    margin: 0;
+    right: 4%;
+    bottom: 10px;
+    width: 40%;
+    position: absolute;
+    align-self: flex-end;
+    
   }
   .download .link-box a.botton {
     font-size: 24px;

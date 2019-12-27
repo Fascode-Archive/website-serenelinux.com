@@ -1,0 +1,1 @@
+<?php header("HTTP/1.1 301 Moved Permanently");header("Location: https://osdn.net/projects/serene/forums/35312/");exit;
