@@ -7,17 +7,20 @@
   padding-bottom: 30px;
 }
 .download .text-box{
+  display: flex;
+  flex-direction: column-reverse;
   margin: 20px 0 20px 5%;
 }
 .download .text-box h1{
-  font-size: 19px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  color: #333;
 }
 .download .text-box h1 span{
   display: inline-block;
 }
 .download .text-box h2{
-  font-size: 32px;
+  font-size: 19px;
+  margin-bottom: 10px;
 }
 .download .category-box{
   display: flex;
@@ -32,6 +35,10 @@
 }
 .download .category-box i{
   font-size: 48px;
+}
+.download img,
+.download video{
+  width: 90%;
 }
 .download .link-box{
   margin: 10px auto; 
