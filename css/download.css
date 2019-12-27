@@ -101,7 +101,7 @@
 ------------------------------ */
 @media screen and (min-width:960px) and (max-width:1279px) {
   .download{
-    min-height: 450px;
+    min-height: 500px;
     max-height: 100vh;
     padding-bottom:  5vh;
   }
