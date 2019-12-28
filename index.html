@@ -52,7 +52,7 @@
     <div class="text-box">
       <span>SereneLinux</span>
       <h1 class="video-title a1">
-        <p id="video-k0">You will pioneer.</p>
+        <p id="video-k0" class="k-ani-ja1">You will pioneer.</p>
         <p id="video-k1">多くの派生。</p>
         <p id="video-k2">軽快な動作。</p>
         <p id="video-k3">美しいUI。</p>
@@ -114,28 +114,28 @@
   <footer id="foot"><small>© 2019 SereneLinux</small></footer>
   <script>
     var s=1,
-    o0=document.getElementById("video-k0"),
-    o1=document.getElementById("video-k1"),
-    o2=document.getElementById("video-k2"),
-    o3=document.getElementById("video-k3");
+    o1=document.getElementById("video-k0"),
+    o2=document.getElementById("video-k1"),
+    o3=document.getElementById("video-k2"),
+    o4=document.getElementById("video-k3");
     window.addEventListener("load",function(){
-    o0.classList.add("k-ani");
     setInterval(function() {
+    o1.classList.remove("k-ani-ja1");
     if(s==0){
-    o3.classList.remove("k-ani");
-    o0.classList.add("k-ani");
+    o4.classList.remove("k-ani-ja4");
+    o1.classList.add("k-ani-ja1");
     s++}
     else if(s==1){
-    o0.classList.remove("k-ani");
-    o1.classList.add("k-ani");
+    o1.classList.remove("k-ani-ja1");
+    o2.classList.add("k-ani-ja2");
     s++}
     else if(s==2){
-    o1.classList.remove("k-ani");
-    o2.classList.add("k-ani");
+    o2.classList.remove("k-ani-ja2");
+    o3.classList.add("k-ani-ja3");
     s++}
     else if(s==3){
-    o2.classList.remove("k-ani");
-    o3.classList.add("k-ani");
+    o3.classList.remove("k-ani-ja3");
+    o4.classList.add("k-ani-ja4");
     s=0}
     },6000);
     });

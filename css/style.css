@@ -213,6 +213,10 @@ body::after{
   color: #333;
 }
 #news section{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+  justify-content: space-between;
   box-sizing: border-box;
   width: 90%;
   padding: 10px;
@@ -220,6 +224,7 @@ body::after{
   text-align: center;
 }
 #news .title{
+  width: 100%;
   font-size: 20px;
   margin-bottom: 8px;
 }
@@ -227,11 +232,12 @@ body::after{
   display: inline-block;
 }
 #news p{
+  width: 100%;
   font-size: 19px;
   color: #666;
 }
 #news time{
-  display: block;
+  width: 100%;
   line-height: 22px;
   margin: 5px 0;
   color: #666;
@@ -265,7 +271,8 @@ body::after{
   text-align: center;
 }
 .video-title.a1{
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
   height: 30px;
   padding: 10px 0;
   font-size: 25px;
@@ -275,25 +282,95 @@ body::after{
   font-family: Consolas,Monaco,monospace;
   font-weight: bold;
   width: 0;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
   white-space: nowrap;
-  position: absolute;
-  left: 0;
   height: 30px;
 }
-.k-ani{
-  animation: typing 6s steps(18) infinite, cursor 1s steps(1,start) infinite;
+.video-title.a1 p.k-ani-ja1,
+.video-title.a1 p.k-ani-ja2,
+.video-title.a1 p.k-ani-ja3,
+.video-title.a1 p.k-ani-ja4,
+.video-title.a1 p.k-ani-en1,
+.video-title.a1 p.k-ani-en2,
+.video-title.a1 p.k-ani-en3,
+.video-title.a1 p.k-ani-en4{
   border-right: .1em solid;
+}
+.video-title.a1 p.k-ani-ja1{
+  animation: typing1 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
+}
+.video-title.a1 p.k-ani-ja2{
+  animation: typing2 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
+}
+.video-title.a1 p.k-ani-ja3{
+  animation: typing3 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
+}
+.video-title.a1 p.k-ani-ja4{
+  animation: typing4 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
+}
+.video-title.a1 p.k-ani-en1{
+  animation: typing1en 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
+}
+.video-title.a1 p.k-ani-en2{
+  animation: typing2en 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
+}
+.video-title.a1 p.k-ani-en3{
+  animation: typing3en 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
+}
+.video-title.a1 p.k-ani-en4{
+  animation: typing4en 6s steps(20) infinite, cursor 1s steps(1,start) infinite;
 }
 @keyframes cursor {
   50% { border-right-color:transparent; }
 }
-@keyframes typing {
-  10%{ width:0; }
-  30% { width:18ch }
-  70% { width:18ch }
-  90% { width:0; }
+@keyframes typing1 {
+  5%{ width:0; }
+  15% { width:220px }
+  85% { width:220px }
+  95% { width:0; }
+}
+@keyframes typing2 {
+  5%{ width:0; }
+  15% { width:150px }
+  85% { width:150px }
+  95% { width:0; }
+}
+@keyframes typing3 {
+  5%{ width:0; }
+  15% { width:150px }
+  85% { width:150px }
+  95% { width:0; }
+}
+@keyframes typing4 {
+  5%{ width:0; }
+  15% { width:120px }
+  85% { width:120px }
+  95% { width:0; }
+}
+@keyframes typing1en {
+  5%{ width:0; }
+  15% { width:220px }
+  85% { width:220px }
+  95% { width:0; }
+}
+@keyframes typing2en {
+  5%{ width:0; }
+  15% { width:220px }
+  85% { width:220px }
+  95% { width:0; }
+}
+@keyframes typing3en {
+  5%{ width:0; }
+  15% { width:205px }
+  85% { width:205px }
+  95% { width:0; }
+}
+@keyframes typing4en {
+  5%{ width:0; }
+  15% { width:170px }
+  85% { width:170px }
+  95% { width:0; }
 }
 #language{
   display: inline-block;
