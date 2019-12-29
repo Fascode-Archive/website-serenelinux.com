@@ -60,9 +60,18 @@ body::after{
   height: 72px;
 }
 #head h1 a img{
+  display: inline-block;
   width: 64px;
   height: 64px;
   padding: 4px;
+}
+#head h1 a span{
+  height: 72px;
+  line-height: 72px;
+  position: absolute;
+  left: 72px;
+  font-size: 32px;
+  color:#333;
 }
 #gnav{
   clear: both;
@@ -196,7 +205,7 @@ body::after{
 @media screen and (min-width:960px) and (max-width:1279px) {
   #gnav{
     right: 0;
-    width: 870px;
+    width: 700px;
     height: 72px;
     background-color: #fefeff;
   }
@@ -222,7 +231,7 @@ body::after{
   #gnav-ul li a{
     height: 72px;
     line-height: 72px;
-    padding: 0 20px;
+    padding: 0 10px;
     color: black;
   }
   #gnav-ul li a:hover{

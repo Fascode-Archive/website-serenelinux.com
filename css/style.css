@@ -60,9 +60,18 @@ body::after{
   height: 72px;
 }
 #head h1 a img{
+  display: inline-block;
   width: 64px;
   height: 64px;
   padding: 4px;
+}
+#head h1 a span{
+  height: 72px;
+  line-height: 72px;
+  position: absolute;
+  left: 72px;
+  font-size: 32px;
+  color:#333;
 }
 #gnav{
   clear: both;
@@ -324,52 +333,53 @@ body::after{
 @keyframes cursor {
   50% { border-right-color:transparent; }
 }
+
 @keyframes typing1 {
   5%{ width:0; }
-  15% { width:220px }
-  85% { width:220px }
+  15% { width:260px }
+  85% { width:260px }
   95% { width:0; }
 }
 @keyframes typing2 {
   5%{ width:0; }
-  15% { width:150px }
-  85% { width:150px }
+  15% { width:160px }
+  85% { width:160px }
   95% { width:0; }
 }
 @keyframes typing3 {
   5%{ width:0; }
-  15% { width:150px }
-  85% { width:150px }
+  15% { width:160px }
+  85% { width:160px }
   95% { width:0; }
 }
 @keyframes typing4 {
   5%{ width:0; }
-  15% { width:120px }
-  85% { width:120px }
+  15% { width:130px }
+  85% { width:130px }
   95% { width:0; }
 }
 @keyframes typing1en {
   5%{ width:0; }
-  15% { width:220px }
-  85% { width:220px }
+  15% { width:260px }
+  85% { width:260px }
   95% { width:0; }
 }
 @keyframes typing2en {
   5%{ width:0; }
-  15% { width:220px }
-  85% { width:220px }
+  15% { width:260px }
+  85% { width:260px }
   95% { width:0; }
 }
 @keyframes typing3en {
   5%{ width:0; }
-  15% { width:205px }
-  85% { width:205px }
+  15% { width:240px }
+  85% { width:240px }
   95% { width:0; }
 }
 @keyframes typing4en {
   5%{ width:0; }
-  15% { width:170px }
-  85% { width:170px }
+  15% { width:200px }
+  85% { width:200px }
   95% { width:0; }
 }
 #language{
@@ -462,7 +472,7 @@ body::after{
 @media screen and (min-width:960px) and (max-width:1279px) {
   #gnav{
     right: 0;
-    width: 870px;
+    width: 700px;
     height: 72px;
     background-color: #fefeff;
   }
@@ -489,7 +499,7 @@ body::after{
   #gnav-ul li a{
     height: 72px;
     line-height: 72px;
-    padding: 0 20px;
+    padding: 0 10px;
     color: black;
   }
   #gnav-ul li a:hover{
@@ -521,7 +531,7 @@ body::after{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around; 
-    padding: 50px 10px;
+    padding: 80px 10px;
   }
   #news section{
     width: 25%;
@@ -592,7 +602,7 @@ body::after{
     box-sizing: border-box;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 50px 40px;
+    padding: 80px 40px;
   }
   #news section{
     width: 290px;

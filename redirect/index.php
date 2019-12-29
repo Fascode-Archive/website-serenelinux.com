@@ -18,10 +18,10 @@
     <link rel="icon" href="http://192.168.10.50:8888/img/icon/32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="http://192.168.10.50:8888/img/icon/48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="http://192.168.10.50:8888/img/icon/64.png" sizes="64x64" type="image/png">
-    <title>500  Internal Server Error - SereneLinux 公式サイト</title>
-    <meta property="og:title" content="500  Internal Server Error - SereneLinux 公式サイト">
-    <meta name="description" content="500  Internal Server Error サーバー側でエラーが発生しています。">
-    <meta property="og:description" content="500  Internal Server Error サーバー側でエラーが発生しています。">
+    <title>リダイレクト - SereneLinux 公式サイト</title>
+    <meta property="og:title" content="リダイレクト - SereneLinux 公式サイト">
+    <meta name="description" content="リダイレクト - SereneLinux 公式サイト">
+    <meta property="og:description" content="リダイレクト先のURLを確認してからアクセスしてください">
     <meta property="og:url" content="http://192.168.10.50:8888/">
     <link rel="canonical" href="http://192.168.10.50:8888/">
     <link rel="canonical" href="http://192.168.10.50:8888/">
@@ -51,10 +51,11 @@
   </header>
   <article id="main">
     <div>
-        <h1>500 Internal Server Error</h1>
-        <p>サーバー側でエラーが発生しています。</p>
+        <h1>他のサイトに移動しようとしています。</h1>
+        <p>移動する際はこちらをクリックしてください</p>
+        <p><a href="<?=htmlspecialchars($_GET["r"], ENT_QUOTES, 'UTF-8');?>"><?=htmlspecialchars($_GET["r"], ENT_QUOTES, 'UTF-8');?></a></p>
     </div>
-    <img src="/img/character/error.png" alt="水瀬玲音">
+    <img src="/img/character/redirect.png" alt="水瀬玲音">
   </article>
   <footer id="foot"><small>© 2019 SereneLinux</small></footer>
 </body>
