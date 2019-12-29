@@ -8,7 +8,7 @@ abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,d
 }
 body{
   font-family:"roboto","noto sans jp";
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 body::before{
   content: "";
