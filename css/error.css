@@ -11,9 +11,13 @@
 #main p{
   font-size: 22px;
   line-height: 30px;
+  width: 100%;
 }
 #main p a{
+  overflow: visible;
+  word-break: break-all;
   font-size: 22px;
+
 }
 #main img{
   width: 320px;
