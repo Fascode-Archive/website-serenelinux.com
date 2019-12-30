@@ -33,18 +33,18 @@
 <body>
   <input type="checkbox" name="gnav-bin" id="gnav-bin">
   <header id="head">
-    <h1><a href="/"><img src="/img/icon/64.png" alt=""><span>SereneTeam</span></a></h1>
+    <h1><a href="/en/"><img src="/img/icon/64.png" alt="icon"><span>SereneTeam</span></a></h1>
     <label class="gnav-open" for="gnav-bin"><i class="material-icons">menu_open</i></label>
     <nav id="gnav">
       <label class="gnav-close" for="gnav-bin"><i class="material-icons">close</i></label>
       <ul id="gnav-ul">
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/forum/">フォーラム</a></li>
-        <li><a href="/download/">ダウンロード</a></li>
-        <li><a href="/blog/">ブログ</a></li>
-        <li><a href="/link/">リンク</a></li>
-        <li><a href="/donation/">寄付する</a></li>
-        <li><a href="/team/">チーム</a></li>
+        <li><a href="/en/">HOME</a></li>
+        <li><a href="/en/forum/">FORUM</a></li>
+        <li><a href="/en/download/">DOWNLOAD</a></li>
+        <li><a href="/en/blog/">BLOG</a></li>
+        <li><a href="/en/link/">LINK</a></li>
+        <li><a href="/en/donation/">DONATION</a></li>
+        <li><a href="/en/team/">TEAM</a></li>
       </ul>
     </nav>
   </header>
