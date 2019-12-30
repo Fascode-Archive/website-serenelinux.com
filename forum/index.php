@@ -1,1 +1,1 @@
-<?php header("HTTP/1.1 301 Moved Permanently");header("Location: http://linux.bex.jp/redirect/?r=https://osdn.net/projects/serene/forums/35312/");exit;
+<?php header("HTTP/1.1 301 Moved Permanently");header("Location: http://192.168.10.100:8888/redirect/?r=https://forum.serenelinux.com/");exit;

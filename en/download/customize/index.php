@@ -1,1 +1,1 @@
-<?php header("HTTP/1.1 301 Moved Permanently");header("Location: http://linux.bex.jp/en/download/");exit;
+<?php header("HTTP/1.1 301 Moved Permanently");header("Location: http://192.168.10.100:8888/en/download/");exit;
