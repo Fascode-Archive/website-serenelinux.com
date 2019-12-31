@@ -1,1 +1,1 @@
-<?php header("HTTP/1.1 301 Moved Permanently");header("Location: http://192.168.10.100:8888/download/");exit;
+<?php header("HTTP/1.1 301 Moved Permanently");header("Location: https://serenelinux.com/download/");exit;

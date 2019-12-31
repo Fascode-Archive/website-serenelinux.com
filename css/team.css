@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.Team-box{
+	display: block;
+	margin: 20px auto;
+    list-style: none;
+    max-width: 1000px;
+}
+.Team-box li{
+	padding: 20px 2vw;
+	margin-bottom: 20px;
+	box-shadow: 0px 3px 5px #999;
+    background-color: #fefefe;
+}
+.Team-box li .title{
+	box-sizing: border-box;
+	font-size: 26px;
+	height: 64px;
+    line-height: 64px;
+    display: block;
+    text-align: left;
+}
+.Team-box li .title img{
+	vertical-align: middle;
+	margin-right: 10px;
+    text-align: left;
+    float: left;
+	width: 48px;
+	height: 48px;
+}
+.Team-box li .text{
+	font-size: 20px;
+}
+.Team-box li .link{
+	text-align: center;
+	padding: 10px 0;
+}
+.Team-box li .link a{
+    display: inline-block;
+	margin: 0 5px;
+}
+.Team-box li .link a img{
+	width: 30px;
+}
+@media screen and (min-width:480px) and (max-width:599px) { 
+
+}
+
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+
+}
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+
+}
+
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+
+}
