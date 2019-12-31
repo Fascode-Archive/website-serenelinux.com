@@ -43,7 +43,7 @@
         <li><a href="/forum/">フォーラム</a></li>
         <li><a href="/download/">ダウンロード</a></li>
         <li><a href="/blog/">ブログ</a></li>
-        <li><a href="/link/">リンク</a></li>
+        <li><a href="/links/">リンク集</a></li>
         <li><a href="/donation/">寄付する</a></li>
         <li><a href="/team/">チーム</a></li>
       </ul>

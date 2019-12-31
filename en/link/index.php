@@ -1,0 +1,1 @@
+<?php header("Location: https://en/serenelinux.com/links");exit;
