@@ -1,6 +1,5 @@
 <?php
-$db['host'] = "localhost";
-$db['port'] = 3306;
+
 try{
   $pdo = new PDO(
     'mysql:host='.$db['host'].';dbname='.$db['dbname'].';charset=utf8mb4',
