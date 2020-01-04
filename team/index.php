@@ -1,5 +1,5 @@
 <?php
-
+require_once 'databaseconfig.php';
 try{
   $pdo = new PDO(
     'mysql:host='.$db['host'].';dbname='.$db['dbname'].';charset=utf8mb4',
