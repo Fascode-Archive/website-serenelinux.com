@@ -51,21 +51,56 @@
   </header>
   <article class="link">
     <h1>SereneLinux 問い合わせ</h1>
-    <form action="/contact/mail/" method="post">
+    <form action="/contact/mail/" method="post" id="form">
       <label>件名: </label>
-      <input type="text" name="title">
+      <input type="text" name="title" id="f_title">
       <label>お名前: </label>
-      <input type="text" name="name">
+      <input type="text" name="name" id="f_name">
       <label>Email: </label>
-      <input type="email" name="email">
+      <input type="email" name="email" id="f_email">
       <label>問い合わせ内容: </label>
-      <textarea name="content"></textarea>
+      <textarea name="content" id="f_content"></textarea>
+      <input type="submit" id="ajax">
     </form>
+    <div class="thanks">
+      送信が完了しました内容を確認次第。
+      入力されたメールアドレスにご返信致します。
+      ご返信に１日ほどかかる場合がございます。予めご了承ください。
+    </div>
   </article>
   <a href="/en/links/" id="language">
     <img src="data:image/gif;base64,R0lGODdhIAARAPUAAAQujIRCRNze7BQ6lBQujOQCFAw2lPzm7AwujERerCxKnBw+lOTi7FxytIxubHSGvDxapKy21OwuPExmrGR6tAwyjGyCvJSizCRGnIyOjOQSJDRSpOzq9PRqdPz6/KSu1PS2vIRKTPze3BQ2lOQKHAQylIwqNAwylAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAIAARAAAGr8DFhDAsKhTDRoDEbDqfTWFjMm1AJhMIZXMBeb/g8HexLSus5/NHxG6732wQQWGhk5EN8iAk6fv/gH0aeg8jFAZWZAAPER6Oj5CRjgwVJ4cWABQYWosADh2goaKjoQOXmSdYihYZYq5hCJ2HmpyHEQe4ubq7uCIEp4eqsyYFxcbHyMYCHMzNzs280boir9XWYaTZ2tugDJLf4OEMGoHl5ucaIHDr7O3X79ZQ8vP0TEEAOw==" alt="アメリカ国旗">
     <span>English</span>
   </a>
   <footer id="foot"><small>&copy; 2019-2020 SereneLinux</small></footer>
+<script>
+$(function(){
+$('#ajax').on('click',function(){
+$.ajax({
+url:'./q.php',
+type:'POST',
+data:{
+'mail':$('#f_email').val(),
+'name':$('#f_name').val(),
+'reason':$('#f_title').val(),
+'reason':$('#f_content').val()
+}
+})
+.done( (data) => {
+if (data==="OK") {
+$('#form').slideUp(500);
+$('.thanks').slideDown(500);
+}else{
+}
+})
+.fail( (data) => {
+$('#form').slideDown(500);
+$('.thanks').slideUp(500);
+})
+.always( (data) => {
+});
+});
+});
+</script>
 </body>
 </html>
