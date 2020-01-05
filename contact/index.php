@@ -51,7 +51,16 @@
   </header>
   <article class="link">
     <h1>SereneLinux 問い合わせ</h1>
-    <form action=""></form>
+    <form action="/contact/mail/" method="post">
+      <label>件名: </label>
+      <input type="text" name="title">
+      <label>お名前: </label>
+      <input type="text" name="name">
+      <label>Email: </label>
+      <input type="email" name="email">
+      <label>問い合わせ内容: </label>
+      <textarea name="content"></textarea>
+    </form>
   </article>
   <a href="/en/links/" id="language">
     <img src="data:image/gif;base64,R0lGODdhIAARAPUAAAQujIRCRNze7BQ6lBQujOQCFAw2lPzm7AwujERerCxKnBw+lOTi7FxytIxubHSGvDxapKy21OwuPExmrGR6tAwyjGyCvJSizCRGnIyOjOQSJDRSpOzq9PRqdPz6/KSu1PS2vIRKTPze3BQ2lOQKHAQylIwqNAwylAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAIAARAAAGr8DFhDAsKhTDRoDEbDqfTWFjMm1AJhMIZXMBeb/g8HexLSus5/NHxG6732wQQWGhk5EN8iAk6fv/gH0aeg8jFAZWZAAPER6Oj5CRjgwVJ4cWABQYWosADh2goaKjoQOXmSdYihYZYq5hCJ2HmpyHEQe4ubq7uCIEp4eqsyYFxcbHyMYCHMzNzs280boir9XWYaTZ2tugDJLf4OEMGoHl5ucaIHDr7O3X79ZQ8vP0TEEAOw==" alt="アメリカ国旗">
