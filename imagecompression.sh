@@ -14,5 +14,3 @@ do
         $0 $1/$line
     fi
 done
-
-て捨てす
