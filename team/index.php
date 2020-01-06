@@ -54,10 +54,10 @@ function h($s){
     <link rel="icon" href="https://serenelinux.com/img/icon/32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="https://serenelinux.com/img/icon/48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="https://serenelinux.com/img/icon/64.png" sizes="64x64" type="image/png">
-    <title>チーム - SereneLinux セレネリナックス 公式サイト</title>
-    <meta property="og:title" content="チーム - SereneLinux セレネリナックス 公式サイト">
-    <meta name="description" content="SereneLinux デベロッパー チーム集">
-    <meta property="og:description" content="SereneLinux デベロッパー チーム集">
+    <title>チーム - SereneLinux セレネリナックス 公式サイト 日本語ページ</title>
+    <meta property="og:title" content="チーム - SereneLinux セレネリナックス  公式サイト 日本語ページ">
+    <meta name="description" content="SereneLinuの開発等に大きく関わってる方々をご紹介するページです。このページ以外にもメンバーはいますが、大きな実績がまだありません。チーム集">
+    <meta property="og:description" content="SereneLinuxの開発等に大きく関わってる方々をご紹介するページです。このページ以外にもメンバーはいますが、大きな実績がまだありません。チーム集">
     <meta property="og:url" content="https://serenelinux.com/team/">
     <link rel="canonical" href="https://serenelinux.com/team/">
     <link rel="alternate" href="https://serenelinux.com/team/" hreflang="ja-jp">
