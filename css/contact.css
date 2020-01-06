@@ -1,0 +1,71 @@
+@charset "UTF-8";
+.contact{
+  max-width: 1020px;
+  width: 90%;
+  margin: 0 auto;
+}
+.contact h1{
+    font-size: 26px;
+    text-align: center;
+    padding: 30px 0;
+}
+.contact h1 span{
+    display: block;
+}
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+  width: 99%;
+  padding: 5px;
+  margin: 1%;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+.contact form{
+    max-width: 960px;
+}
+
+@media screen and (min-width:480px) and (max-width:599px) { 
+
+}
+
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+
+}
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+
+}
+
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+
+}

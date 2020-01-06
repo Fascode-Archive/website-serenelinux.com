@@ -49,8 +49,8 @@
       </ul>
     </nav>
   </header>
-  <article class="link">
-    <h1>SereneLinux 問い合わせ</h1>
+  <article class="contact">
+    <h1>SereneLinux <span>問い合わせフォーム</span></h1>
     <form action="/contact/mail/" method="post" id="form">
       <label>件名: </label>
       <input type="text" name="title" id="f_title">
@@ -63,9 +63,10 @@
       <input type="submit" id="ajax">
     </form>
     <div class="thanks">
-      送信が完了しました内容を確認次第。
-      入力されたメールアドレスにご返信致します。
-      ご返信に１日ほどかかる場合がございます。予めご了承ください。
+      <p>送信が完了しました内容を確認次第。<br>
+      入力されたメールアドレスにご返信致します。<br>
+      ご返信に１日ほどかかる場合がございます。予めご了承ください。</p>
+      
     </div>
   </article>
   <a href="/en/links/" id="language">
@@ -82,8 +83,8 @@ type:'POST',
 data:{
 'mail':$('#f_email').val(),
 'name':$('#f_name').val(),
-'reason':$('#f_title').val(),
-'reason':$('#f_content').val()
+'title':$('#f_title').val(),
+'content':$('#f_content').val()
 }
 })
 .done( (data) => {
