@@ -54,13 +54,13 @@
     <h1>SereneLinux <span>問い合わせフォーム</span></h1>
     <form id="form">
       <label>件名: </label>
-      <input type="text" name="title" id="f_title">
+      <input type="text" name="title" id="f_title" required>
       <label>お名前: </label>
-      <input type="text" name="name" id="f_name">
+      <input type="text" name="name" id="f_name" required>
       <label>Email: </label>
-      <input type="email" name="email" id="f_email">
+      <input type="email" name="email" id="f_email" required>
       <label>問い合わせ内容: </label>
-      <textarea name="content" id="f_content"></textarea>
+      <textarea name="content" id="f_content" required></textarea>
       <input type="button" id="ajax" value="送信">
     </form>
     <div class="thanks">
