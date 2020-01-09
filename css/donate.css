@@ -5,6 +5,7 @@ body{
 }
 #main{
     max-width: 960px;
+    min-height: 70vh;
     margin: 0 auto;
 }
 #main div{
@@ -49,6 +50,7 @@ body{
 @media screen and (min-width:600px) and (max-width:959px) {
     #main{
         padding: 3vw;
+        margin-top: 50px;
     }
     #main div{
         width: 60%;
@@ -63,7 +65,7 @@ body{
         width: 30%;
         margin: 0;
         margin-left: 5vw;
-        float: left;
+        float: right;
     }
     #main::after{
         content: "";
@@ -83,7 +85,7 @@ body{
     #main div{
         width: 60%;
         padding:0;
-        margin-top: 6vw;
+        margin-top: 150px;
         float: left;
     }
     #main div h1{
@@ -93,7 +95,7 @@ body{
         width: 30%;
         margin: 0;
         margin-left: 5vw;
-        float: left;
+        float: right;
     }
     #main::after{
         content: "";
@@ -113,7 +115,7 @@ body{
     #main div{
         width: 60%;
         padding:0;
-        margin-top: 6vw;
+        margin-top: 150px;
         float: left;
     }
     #main div h1{
@@ -123,7 +125,7 @@ body{
         width: 30%;
         margin: 0;
         margin-left: 5vw;
-        float: left;
+        float: right;
     }
     #main::after{
         content: "";
