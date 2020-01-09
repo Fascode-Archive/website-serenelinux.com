@@ -1,1 +1,1 @@
-<?php header("HTTP/1.1 301 Moved Permanently");header("Location: https://serenelinux.com/en/team/");exit;
+<?php header("HTTP/1.1 301 Moved Permanently");header("Location: https://serenelinux.com/en/contact/");exit;

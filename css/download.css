@@ -195,6 +195,7 @@
   }
   .download .category-media-box img,
   .download .category-media-box video{
+    position: absolute;
     width: 55%;
     margin: 0;
   }
@@ -202,6 +203,7 @@
     margin: 0;
     right: 4%;
     width: 38%;
+    bottom: -10vw;
     position: absolute;
     align-self: flex-end;
   }
@@ -226,7 +228,7 @@
   }.download-lower .text-box h2{
     font-size: 20px;
   }
-  .download-lower img{
+  .download-lower picture{
     height: 100%;
     width: 50%;
     margin: 0;
@@ -289,6 +291,7 @@
   .download .category-media-box video{
     width: 50%;
     margin: 0;
+    position: absolute;
   }
   .download .link-box{
     margin: 0;
@@ -297,7 +300,7 @@
     width: 40%;
     position: absolute;
     align-self: flex-end;
-    
+    bottom: -150px;
   }
   .download .link-box a.botton {
     font-size: 24px;
