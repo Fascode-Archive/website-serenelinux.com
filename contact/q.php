@@ -33,14 +33,26 @@ $body = <<< EOM
 {$_SERVER['HTTP_ACCEPT_LANGUAGE']}
 {$_SERVER['SERVER_PORT']}
 EOM;
-$fromEmail = "noreply@serenelinux.com";
-$fromName = "SereneLinuxWeb";
-$header = "From: " .mb_encode_mimeheader($fromName) ."<{$fromEmail}>";
-mb_send_mail('naoko561010@gmail.com', $subject, $body, $header);
-mb_send_mail('serenelinux.spt@gmail.com', $subject, $body, $header);
+// $fromEmail = "noreply@serenelinux.com";
+// $fromName = "SereneLinuxWeb";
+// $header = "From: " .mb_encode_mimeheader($fromName) ."<{$fromEmail}>";
+// mb_send_mail('naoko561010@gmail.com', $subject, $body, $header);
+// mb_send_mail('serenelinux.spt@gmail.com', $subject, $body, $header);
+json_post('payload={"text": "'.$body.'"}','https://s.0u0.biz/hooks/hnobhqspdtraign6qb7wet6ajo');
 echo ("OK");
 }
 }
 function h($str){
 return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
+}
+function json_post($data_json,$url){
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_URL, $url);
+$result=curl_exec($ch);
+// echo 'RETURN:'.$result;
+curl_close($ch);
 }
