@@ -14,6 +14,7 @@ body{
     padding: 7vw;
 }
 #main div h1{
+    text-align: center;
     font-size: 38px;
     margin-bottom: 10px;
 }
