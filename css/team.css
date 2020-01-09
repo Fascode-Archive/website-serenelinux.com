@@ -4,26 +4,29 @@
 	display: block;
 	margin: 20px auto;
     list-style: none;
-    max-width: 1000px;
+	max-width: 1200px;
 }
 .Team-box li{
 	width: 90%;
 	padding: 20px 2vw;
 	margin: 0 auto 20px;
 	box-shadow: 0px 3px 5px #999;
-    background-color: #fefefe;
+	background-color: #fefefe;
+	height: 200px;
+	box-sizing: border-box;
+	vertical-align: top;
 }
 .Team-box li .title{
 	box-sizing: border-box;
 	font-size: 26px;
-	height: 64px;
-    line-height: 64px;
+	height: 48px;
+    line-height: 48px;
     display: block;
     text-align: left;
 }
 .Team-box li .title img{
 	vertical-align: middle;
-	margin-right: 10px;
+	margin: 0 10px;
     text-align: left;
     float: left;
 	width: 48px;
@@ -31,6 +34,7 @@
 }
 .Team-box li .text{
 	font-size: 20px;
+	padding: 8px 4px;
 }
 .Team-box li .link{
 	text-align: center;
@@ -50,16 +54,36 @@
 /* 600px〜959px：タブレット
 ------------------------------ */
 @media screen and (min-width:600px) and (max-width:959px) {
-
+	.Team-box li{
+		width: 70%;
+	}
 }
 /* 960px〜1279px：小型PC
 ------------------------------ */
 @media screen and (min-width:960px) and (max-width:1279px) {
 
+	.Team-box{
+		font-size: 0;
+	}
+	.Team-box li{
+		width: 44%;
+		margin: 20px 0 20px 4%;
+		display: inline-block;
+	}
 }
 
 /* 1280px〜：大型PC
 ------------------------------ */
 @media screen and (min-width:1280px) {
+	.Team-box{
+		font-size: 0;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	.Team-box li{
+		width: 510px;
+		margin: 20px 20px;
+		display: inline-block;
+	}
 
 }
