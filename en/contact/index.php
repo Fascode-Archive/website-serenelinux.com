@@ -18,17 +18,19 @@
     <link rel="icon" href="https://serenelinux.com/img/icon/32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="https://serenelinux.com/img/icon/48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="https://serenelinux.com/img/icon/64.png" sizes="64x64" type="image/png">
-    <title>Redirect - SereneLinux Official Site</title>
-    <meta property="og:title" content="Redirect - SereneLinux Official Site">
-    <meta name="description" content="Redirect - SereneLinux Official Site">
-    <meta property="og:description" content="Please check the URL of the redirect destination before accessing">
-    <meta property="og:url" content="https://serenelinux.com/en/">
-    <link rel="canonical" href="https://serenelinux.com/en/">
-    <link rel="alternate" href="https://serenelinux.com/" hreflang="ja-jp">
-    <link rel="alternate" href="https://serenelinux.com/en/" hreflang="en-us">
-    <link rel="alternate" href="https://serenelinux.com/" hreflang="x-default">
+    <title>Contact - SereneLinux Official Site</title>
+    <meta property="og:title" content="Contact - SereneLinux Official Site">
+    <meta name="description" content="Click here to contact SereneLinux. Report bugs to the user forum or the Discord community">
+    <meta property="og:description" content="Click here to contact SereneLinux. Report bugs to the user forum or the Discord community">
+    <meta property="og:url" content="https://serenelinux.com/en/contact/">
+    <link rel="canonical" href="https://serenelinux.com/en/contact/">
+    <link rel="alternate" href="https://serenelinux.com/contact/" hreflang="ja-jp">
+    <link rel="alternate" href="https://serenelinux.com/en/contact/" hreflang="en-us">
+    <link rel="alternate" href="https://serenelinux.com/contact/" hreflang="x-default">
+    <meta name="google" content="notranslate">
     <link rel="stylesheet" href="/css/default.css">
-    <link rel="stylesheet" href="/css/error.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
   <input type="checkbox" name="gnav-bin" id="gnav-bin">
@@ -48,18 +50,59 @@
       </ul>
     </nav>
   </header>
-  <article id="main">
-    <div>
-        <h1>You are about to move to another site.</h1>
-        <p>Click here to move</p>
-        <p><a href="<?=htmlspecialchars($_GET["r"], ENT_QUOTES, 'UTF-8');?>"><?=htmlspecialchars($_GET["r"], ENT_QUOTES, 'UTF-8');?></a></p>
+  <article class="contact">
+    <h1>SereneLinux <span>Contact form</span></h1>
+    <form id="form">
+      <label>Title: </label>
+      <input type="text" name="title" id="f_title" required>
+      <label>Name: </label>
+      <input type="text" name="name" id="f_name" required>
+      <label>Email: </label>
+      <input type="email" name="email" id="f_email" required>
+      <label>Content of Contact: </label>
+      <textarea name="content" id="f_content" required></textarea>
+      <input type="button" id="ajax" value="送信">
+    </form>
+    <div class="thanks">
+      <p>As soon as you confirm the content that transmission has been completed. <br>
+      We will reply to the entered email address. <br>
+      It may take up to one day to reply. Please note.</p>
+      
     </div>
-    <img src="/img/character/redirect.png" alt="水瀬玲音">
   </article>
-  <a href="/redirect/?r=<?=htmlspecialchars($_GET["r"], ENT_QUOTES, 'UTF-8');?>" id="language">
+  <a href="/contact/" id="language">
     <img src="data:image/gif;base64,R0lGODdhIAAVAPQAAP////vX2vWhp/F0fvvV2OUAC+UADOgcLO9kb+YAEukhMP729/vb3fnMz/va3P719vamrO9ocvKEjf7+/v709OgbKvajqfzs7f739wAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAIAAVAAAFeKBzjWRpnugoAmzrvnDMjnJtt/Stw7nNWIOBxTG59WSSQmK5lFBsR1iESU0gFrWoy1KtCrKX2qFLrTxkWlaAXCWgw7EGm9p4y9bzpTuWZinyZnYyEHlfgjJTZBEYYFBJVU5QcD4QEhIQDDp9O42cnpuePCIppKUqIQA7" alt="日本語">
     <span>日本語</span>
   </a>
   <footer id="foot"><p><a href="/en/contact/">Contact</a></p><small>&copy; 2019-2020 SereneLinux</small></footer>
+<script>
+$(function(){
+$('#ajax').on('click',function(){
+$.ajax({
+url:'./q.php',
+type:'POST',
+data:{
+'mail':$('#f_email').val(),
+'name':$('#f_name').val(),
+'title':$('#f_title').val(),
+'content':$('#f_content').val()
+}
+})
+.done( (data) => {
+if (data==="OK") {
+$('#form').slideUp(500);
+$('.thanks').slideDown(500);
+}else{
+}
+})
+.fail( (data) => {
+$('#form').slideDown(500);
+$('.thanks').slideUp(500);
+})
+.always( (data) => {
+});
+});
+});
+</script>
 </body>
 </html>

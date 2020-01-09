@@ -112,7 +112,7 @@ SereneLinuxによる審査の後、SlackやTrelloなどへ順次招待します�
     <img src="data:image/gif;base64,R0lGODdhIAARAPUAAAQujIRCRNze7BQ6lBQujOQCFAw2lPzm7AwujERerCxKnBw+lOTi7FxytIxubHSGvDxapKy21OwuPExmrGR6tAwyjGyCvJSizCRGnIyOjOQSJDRSpOzq9PRqdPz6/KSu1PS2vIRKTPze3BQ2lOQKHAQylIwqNAwylAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAIAARAAAGr8DFhDAsKhTDRoDEbDqfTWFjMm1AJhMIZXMBeb/g8HexLSus5/NHxG6732wQQWGhk5EN8iAk6fv/gH0aeg8jFAZWZAAPER6Oj5CRjgwVJ4cWABQYWosADh2goaKjoQOXmSdYihYZYq5hCJ2HmpyHEQe4ubq7uCIEp4eqsyYFxcbHyMYCHMzNzs280boir9XWYaTZ2tugDJLf4OEMGoHl5ucaIHDr7O3X79ZQ8vP0TEEAOw==" alt="アメリカ国旗">
     <span>English</span>
   </a>
-  <footer id="foot"><p><a href="/">問い合わせ</a></p><small>&copy; 2019-2020 SereneLinux</small></footer>
+  <footer id="foot"><p><a href="/contact/">問い合わせ</a></p><small>&copy; 2019-2020 SereneLinux</small></footer>
 </body>
 <!-- <script>
 $(function(){
