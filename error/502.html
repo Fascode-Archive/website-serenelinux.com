@@ -46,6 +46,7 @@
         <li><a href="/links/">リンク集</a></li>
         <li><a href="/donate/">寄付する</a></li>
         <li><a href="/team/">チーム</a></li>
+        <li><a href="/contact/">問い合わせ</a></li>
       </ul>
     </nav>
   </header>

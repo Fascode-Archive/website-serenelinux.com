@@ -4,12 +4,12 @@ body{
   font-size: 20px;
 }
 .contact{
-  max-width: 1020px;
+  max-width: 960px;
   width: 90%;
   margin: 0 auto;
 }
 .contact h1{
-  font-size: 26px;
+  font-size: 32px;
   text-align: center;
   padding: 60px 0;
 }
@@ -32,7 +32,7 @@ textarea {
   width: 99%;
   padding: 5px;
   margin: 1%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 input[type='submit'],
@@ -57,7 +57,7 @@ select::-ms-expand {
 }
 
 .contact label{
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .contact input[type='button']{
   font-size: 19px;
@@ -82,11 +82,18 @@ select::-ms-expand {
 ------------------------------ */
 @media screen and (min-width:600px) and (max-width:959px) {
 
+  .contact{
+    width: 80%;
+  }
 }
 /* 960px〜1279px：小型PC
 ------------------------------ */
 @media screen and (min-width:960px) and (max-width:1279px) {
 
+
+  .contact{
+    width: 60%;
+  }
 }
 
 /* 1280px〜：大型PC

@@ -47,7 +47,7 @@
         <li><a href="/en/links/">LINKS</a></li>
         <li><a href="/en/donate/">DONATE</a></li>
         <li><a href="/en/team/">TEAM</a></li>
-      </ul>
+         <li><a href="/en/contact/">CONTACT</a></li>     </ul>
     </nav>
   </header>
   <article class="contact">
