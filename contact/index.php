@@ -7,29 +7,30 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@serene_jp">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" contet="linux.bex.jp">
+    <meta property="og:site_name" contet="serenelinux.com">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="http://linux.bex.jp/img/icon/150.png">
-    <link rel="apple-touch-icon-precomposed" href="http://linux.bex.jp/img/icon/150.png">
-    <meta name="msapplication-TileImage" content="http://linux.bex.jp/img/icon/150.png">
+    <meta property="og:image" content="https://serenelinux.com/img/icon/150.png">
+    <link rel="apple-touch-icon-precomposed" href="https://serenelinux.com/img/icon/150.png">
+    <meta name="msapplication-TileImage" content="https://serenelinux.com/img/icon/150.png">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <link rel="shortcut icon" href="http://linux.bex.jp/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="http://linux.bex.jp/img/icon/16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="http://linux.bex.jp/img/icon/32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="http://linux.bex.jp/img/icon/48.png" sizes="48x48" type="image/png">
-    <link rel="icon" href="http://linux.bex.jp/img/icon/64.png" sizes="64x64" type="image/png">
+    <link rel="shortcut icon" href="https://serenelinux.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://serenelinux.com/img/icon/16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="https://serenelinux.com/img/icon/32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://serenelinux.com/img/icon/48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="https://serenelinux.com/img/icon/64.png" sizes="64x64" type="image/png">
     <title>問い合わせ - SereneLinux Official Site</title>
     <meta property="og:title" content="問い合わせ - SereneLinux Official Site">
     <meta name="description" content="SereneLinuxに関する、問い合わせはこちら。バグ不具合の報告はユーザーフォーラムまたはDiscordコミュニティーへ">
     <meta property="og:description" content="SereneLinuxに関する、問い合わせはこちら。バグ不具合の報告はユーザーフォーラムまたはDiscordコミュニティーへ">
-    <meta property="og:url" content="http://linux.bex.jp/contact/">
-    <link rel="canonical" href="http://linux.bex.jp/contact/">
-    <link rel="alternate" href="http://linux.bex.jp/contact/" hreflang="ja-jp">
-    <link rel="alternate" href="http://linux.bex.jp/en/contact/" hreflang="en-us">
-    <link rel="alternate" href="http://linux.bex.jp/contact/" hreflang="x-default">
+    <meta property="og:url" content="https://serenelinux.com/contact/">
+    <link rel="canonical" href="https://serenelinux.com/contact/">
+    <link rel="alternate" href="https://serenelinux.com/contact/" hreflang="ja-jp">
+    <link rel="alternate" href="https://serenelinux.com/en/contact/" hreflang="en-us">
+    <link rel="alternate" href="https://serenelinux.com/contact/" hreflang="x-default">
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
   <input type="checkbox" name="gnav-bin" id="gnav-bin">
@@ -51,7 +52,7 @@
   </header>
   <article class="contact">
     <h1>SereneLinux <span>問い合わせフォーム</span></h1>
-    <form action="/contact/mail/" method="post" id="form">
+    <form id="form">
       <label>件名: </label>
       <input type="text" name="title" id="f_title">
       <label>お名前: </label>
@@ -60,7 +61,7 @@
       <input type="email" name="email" id="f_email">
       <label>問い合わせ内容: </label>
       <textarea name="content" id="f_content"></textarea>
-      <input type="submit" id="ajax">
+      <input type="button" id="ajax" value="送信">
     </form>
     <div class="thanks">
       <p>送信が完了しました内容を確認次第。<br>
@@ -88,6 +89,7 @@ data:{
 }
 })
 .done( (data) => {
+  console.log(data.text);
 if (data==="OK") {
 $('#form').slideUp(500);
 $('.thanks').slideDown(500);

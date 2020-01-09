@@ -65,7 +65,6 @@ function h($s){
     <link rel="alternate" href="https://serenelinux.com/team/" hreflang="x-default">
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/team.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta name="google" content="notranslate">
 </head>
 <body>
