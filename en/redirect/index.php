@@ -43,7 +43,7 @@
         <li><a href="/en/download/">DOWNLOAD</a></li>
         <li><a href="/en/blog/">BLOG</a></li>
         <li><a href="/en/links/">LINKS</a></li>
-        <li><a href="/en/donation/">DONATION</a></li>
+        <li><a href="/en/donate/">DONATE</a></li>
         <li><a href="/en/team/">TEAM</a></li>
       </ul>
     </nav>

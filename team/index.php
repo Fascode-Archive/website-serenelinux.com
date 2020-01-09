@@ -81,7 +81,7 @@ function h($s){
         <li><a href="/download/">ダウンロード</a></li>
         <li><a href="/blog/">ブログ</a></li>
         <li><a href="/links/">リンク集</a></li>
-        <li><a href="/donation/">寄付する</a></li>
+        <li><a href="/donate/">寄付する</a></li>
         <li><a href="/team/">チーム</a></li>
       </ul>
     </nav>
