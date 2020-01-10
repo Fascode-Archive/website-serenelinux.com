@@ -1,8 +1,13 @@
 <?php
 header('Content-type: text/plain; charset= UTF-8');
 if ($_SERVER['REQUEST_METHOD']=="POST") {
-if (empty($_POST['name']) || !is_string($_POST['name'])) {
+if (empty($_POST['name']) || !is_string($_POST['name'])||
+empty($_POST['mail']) || !is_string($_POST['mail'])||
+empty($_POST['title']) || !is_string($_POST['title'])||
+empty($_POST['content']) || !is_string($_POST['content'])
+) {
 }else{
+if(okmail($_POST['mail'])){
 // mb_language("ja");
 // mb_internal_encoding("UTF-8");
 // $subject = "S 問い合わせページからの自動送信";
@@ -38,7 +43,7 @@ $url = "https://s.0u0.biz/hooks/hnobhqspdtraign6qb7wet6ajo";
 $content = array(
     "icon_url" => "https://serenelinux.com/team/icon/minaserene.jpg",
     "username" => "web-contact",
-    "text"     => $body,
+    "text"     => h(str_replace('@', '＠', $body)),
 );
 
 $context = stream_context_create(array(
@@ -60,9 +65,32 @@ echo "OK";
 if($response != 'ok' ) {
 echo "NG";
 }
+    
+}
 }
 }
 
 function h($str){
 return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
+}
+function okmail($to){
+$domain = explode('@', $to);
+$domain = end($domain);
+getmxrr($domain, $mx);
+$fp = stream_socket_client($mx[0].':25');
+if(!$fp) {exit;}
+fwrite($fp, "EHLO {$mx[0]}\r\n");
+$r = fread($fp, 128);
+fwrite($fp, "MAIL FROM: <from@hogehoge.jp>\r\n");
+$r = fread($fp, 128);
+fwrite($fp, "RCPT TO: <".$to.">\r\n");
+$r = fread($fp, 128);
+fwrite($fp, "DATA\r\n");
+$r = fread($fp, 128);
+$code = substr($r, 0, 3);
+if($code == 250 || $code == 354) {
+return true;
+} else {
+return false;
+}
 }
