@@ -300,6 +300,7 @@ body::after{
     line-height: 72px;
     padding: 0 8px;
     color: black;
+    font-size: 18px;
   }
   #gnav-ul li a:hover{
     background-color: #fefeff;
