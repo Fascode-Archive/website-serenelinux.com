@@ -94,6 +94,9 @@ video,img{
   width: 85%;
   margin: 0 auto;
 }
+h1,h2,h3{
+  font-weight: 300;
+}
 #head{
   display: block;
   box-sizing: border-box;

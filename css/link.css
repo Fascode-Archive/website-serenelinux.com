@@ -5,8 +5,14 @@
     margin: 70px auto;
     color: #333;
 }
+.link h2{
+    font-size: 28px;
+    font-weight: 100;
+    margin: 70px auto 30px;
+    text-align: center;
+    color: #333;
+}
 .link ul{
-    min-height: 68vh;
     padding: 0 10vw;
     font-size: 0;
     text-align: center;
