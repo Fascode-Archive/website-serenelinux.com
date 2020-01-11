@@ -124,6 +124,7 @@ body::after{
   vertical-align: top;
   width: 72px;
   height: 72px;
+  font-weight: bold;
 }
 #head h1 a img{
   display: inline-block;
