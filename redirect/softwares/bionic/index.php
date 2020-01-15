@@ -8,6 +8,6 @@ $source = file_get_contents("https://api.github.com/repos/hayao-serene/serene-st
 )));
 $user = json_decode($source, true);
 $user_data = array(
-  'name' => $user['name']
+  'tag_name' => $user['name']
 );
 header("Location: https://github.com/hayao-serene/serene-startdash-scripts-bionic/archive/".$user['name'].".tar.gz");exit;
