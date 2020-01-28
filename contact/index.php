@@ -35,7 +35,7 @@
 <body>
   <input type="checkbox" name="gnav-bin" id="gnav-bin">
   <header id="head">
-    <h1><a href="/"><img src="/img/icon/64.png" alt="セレネリナックス"><span>SereneTeam</span></a></h1>
+    <h1><a href="/"><img src="/img/icon/64.png" alt="セレネリナックス"><span>SereneLinux</span></a></h1>
     <label class="gnav-open" for="gnav-bin"><i class="material-icons">menu_open</i></label>
     <nav id="gnav">
       <label class="gnav-close" for="gnav-bin"><i class="material-icons">close</i></label>
