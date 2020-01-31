@@ -38,7 +38,7 @@ EOM;
 // mb_send_mail('naoko561010@gmail.com', $subject, $body, $header);
 // mb_send_mail('serenelinux.spt@gmail.com', $subject, $body, $header);
 
-$url = "https://s.0u0.biz/hooks/hnobhqspdtraign6qb7wet6ajo";
+$url = "https://s.0u0.biz/hooks/g9ge1whdx3dwfqyz1a4ahkmo9w";
 
 $content = array(
     "icon_url" => "https://serenelinux.com/team/icon/minaserene.jpg",
